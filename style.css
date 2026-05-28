@@ -1,0 +1,321 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+
+  background:#fffaf6;
+
+  color:#3b2a22;
+}
+
+
+/* navbar */
+
+.navbar{
+  position:fixed;
+
+  top:0;
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:1.2rem 8%;
+
+  background:#fffaf6;
+
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+
+  z-index:1000;
+}
+
+.logo{
+  font-size:2rem;
+
+  font-weight:700;
+}
+
+.logo span{
+  color:#ff8a65;
+}
+
+.nav-menu{
+  display:flex;
+
+  gap:2rem;
+
+  list-style:none;
+}
+
+.nav-menu a{
+  text-decoration:none;
+
+  color:#3b2a22;
+
+  font-weight:500;
+
+  transition:0.3s;
+}
+
+.nav-menu a:hover{
+  color:#ff8a65;
+}
+
+
+/* hero */
+
+.hero{
+  background-image: url("Dessert mochi.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:3rem;
+
+  padding:8rem 8% 4rem;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.tag{
+  display:inline-block;
+
+  background:#ffd8cc;
+
+  color:#ff7043;
+
+  padding:0.6rem 1rem;
+
+  border-radius:999px;
+
+  margin-bottom:1.5rem;
+
+  font-size:0.9rem;
+
+  font-weight:600;
+}
+
+.hero-text h1{
+  font-size:4rem;
+
+  line-height:1.2;
+
+  margin-bottom:1.5rem;
+}
+
+.hero-text h1 span{
+  color:#ff8a65;
+}
+
+.desc{
+  font-size:1.1rem;
+
+  line-height:1.8;
+
+  margin-bottom:2rem;
+
+  max-width:500px;
+}
+
+.hero button,
+.about button{
+  border:none;
+
+  padding:1rem 2rem;
+
+  border-radius:999px;
+
+  background:#ff8a65;
+
+  color:white;
+
+  font-size:1rem;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.hero button:hover,
+.about button:hover{
+  transform:translateY(-5px);
+}
+  
+
+/* product */
+
+.product{
+  padding:5rem 8%;
+}
+
+.product h2{
+  text-align:center;
+
+  font-size:2.5rem;
+
+  margin-bottom:3rem;
+}
+
+.product-container{
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+  gap:2rem;
+}
+
+.card{
+  background:white;
+
+  padding:1rem;
+
+  border-radius:2rem;
+
+  box-shadow:0 4px 15px rgba(0,0,0,0.05);
+
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card img{
+  width:100%;
+
+  height:220px;
+
+  object-fit:cover;
+
+  border-radius:1.5rem;
+}
+
+.card h3{
+  margin:1rem 0 0.5rem;
+}
+
+.card p{
+  line-height:1.7;
+
+  margin-bottom:1rem;
+}
+
+.card span{
+  color:#ff7043;
+
+  font-weight:700;
+}
+
+
+/* about */
+
+.about{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:3rem;
+
+  padding:5rem 8%;
+}
+
+.about-image{
+  flex:1;
+}
+
+.about-image img{
+  width:100%;
+
+  border-radius:2rem;
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text h2{
+  font-size:3rem;
+
+  margin-bottom:1.5rem;
+}
+
+.about-text p{
+  line-height:1.8;
+
+  margin-bottom:2rem;
+}
+
+
+/* footer */
+
+footer{
+  text-align:center;
+
+  padding:2rem;
+
+  background:#ffe8de;
+}
+
+
+/* responsive */
+
+@media(max-width:900px){
+
+  .hero,
+  .about{
+    flex-direction:column;
+
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:3rem;
+  }
+
+  .desc{
+    max-width:100%;
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .navbar{
+    flex-direction:column;
+    font-size: 30℅;
+    gap:1rem;
+  }
+
+  .nav-menu{
+    gap:1rem;
+  }
+
+  .hero-text h1{
+    font-size:2.3rem;
+  }
+
+  .product h2,
+  .about-text h2{
+    font-size:2rem;
+  }
+
+}
